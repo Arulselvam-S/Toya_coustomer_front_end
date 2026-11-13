@@ -1,0 +1,246 @@
+
+/* =================================
+   TOYA NAVBAR
+================================= */
+
+.toya-navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid var(--border-light);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Main navbar container */
+
+.toya-navbar-inner {
+  width: 100%;
+  max-width: var(--container-width);
+  height: 82px;
+  min-height: 82px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* =================================
+   TOYA LOGO
+================================= */
+
+.toya-navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 230px;
+  height: 68px;
+  flex: 0 0 230px;
+
+  overflow: hidden;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+.toya-navbar-brand:focus,
+.toya-navbar-brand:focus-visible {
+  outline: none;
+}
+
+.toya-navbar-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* =================================
+   DESKTOP NAVIGATION
+================================= */
+
+.toya-navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.toya-nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: var(--transition-fast);
+}
+
+.toya-nav-link:hover,
+.toya-nav-link.active {
+  color: var(--primary);
+}
+
+/* =================================
+   NAVBAR ACTIONS
+================================= */
+
+.toya-navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.toya-profile-link {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+
+  color: var(--text-primary);
+  background: var(--primary-light);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.toya-profile-link:hover {
+  color: white;
+  background: var(--primary);
+}
+
+.toya-nav-booking {
+  text-decoration: none;
+}
+
+/* =================================
+   MOBILE MENU BUTTON
+================================= */
+
+.toya-mobile-menu-button {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--primary-light);
+  color: var(--primary);
+  cursor: pointer;
+}
+
+/* =================================
+   MOBILE MENU
+================================= */
+
+.toya-mobile-menu {
+  display: none;
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1000px) {
+  .toya-navbar-inner {
+    gap: 16px;
+    padding: 0 18px;
+  }
+
+  .toya-navbar-brand {
+    width: 200px;
+    flex-basis: 200px;
+  }
+
+  .toya-navbar-links {
+    gap: 18px;
+  }
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+  .toya-navbar-inner {
+    height: 70px;
+    min-height: 70px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .toya-navbar-brand {
+    width: 190px;
+    height: 60px;
+    flex: 0 1 190px;
+  }
+
+  .toya-navbar-links,
+  .toya-navbar-actions {
+    display: none;
+  }
+
+  .toya-mobile-menu-button {
+    display: grid;
+    place-items: center;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  .toya-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow: hidden;
+    padding: 0 20px 18px;
+    background: white;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .toya-mobile-nav-link {
+    padding: 13px 12px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+  }
+
+  .toya-mobile-nav-link.active {
+    color: var(--primary);
+    background: var(--primary-light);
+  }
+
+  .toya-mobile-booking {
+    margin-top: 8px;
+    padding: 13px;
+    text-align: center;
+    color: white;
+    background: var(--gradient-primary);
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 380px) {
+  .toya-navbar-inner {
+    padding: 0 12px;
+  }
+
+  .toya-navbar-brand {
+    width: 165px;
+    flex-basis: 165px;
+  }
+}

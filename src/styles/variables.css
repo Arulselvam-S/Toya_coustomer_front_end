@@ -1,0 +1,75 @@
+
+:root {
+  /* TOYA Brand Colors */
+  --primary: #0878F9;
+  --primary-dark: #0563D5;
+  --primary-light: #E8F4FF;
+  --primary-soft: #F2F8FF;
+
+  /* Background Colors */
+  --background: #F4F9FF;
+  --surface: #FFFFFF;
+  --surface-secondary: #EDF6FF;
+
+  /* Text Colors */
+  --text-primary: #102D62;
+  --text-secondary: #64748B;
+  --text-muted: #94A3B8;
+
+  /* Status Colors */
+  --success: #22B981;
+  --success-light: #E5F8EF;
+  --warning: #F59E0B;
+  --warning-light: #FFF6E5;
+  --danger: #EF4444;
+  --danger-light: #FFF0F0;
+
+  /* Borders */
+  --border: #DCE8F5;
+  --border-light: #EDF3FA;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(
+    135deg,
+    #0878F9 0%,
+    #0064E8 100%
+  );
+
+  --gradient-hero: linear-gradient(
+    135deg,
+    #EAF6FF 0%,
+    #D8EDFF 55%,
+    #F4FAFF 100%
+  );
+
+  --gradient-water: linear-gradient(
+    180deg,
+    #60C5FF 0%,
+    #0878F9 100%
+  );
+
+  /* Shadows */
+  --shadow-sm: 0 3px 12px rgba(8, 120, 249, 0.06);
+  --shadow-md: 0 8px 25px rgba(8, 120, 249, 0.10);
+  --shadow-lg: 0 15px 40px rgba(8, 120, 249, 0.13);
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 26px;
+  --radius-full: 999px;
+
+  /* Typography */
+  --font-primary: 'Inter', sans-serif;
+  --font-heading: 'Manrope', sans-serif;
+
+  /* Layout */
+  --container-width: 1200px;
+  --navbar-height: 76px;
+
+  /* Animation */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.5s ease;
+}

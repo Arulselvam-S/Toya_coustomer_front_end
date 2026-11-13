@@ -1,0 +1,98 @@
+
+.toya-footer {
+  margin-top: 80px;
+  padding: 60px 24px 20px;
+  background: #F0F7FF;
+  border-top: 1px solid var(--border);
+}
+
+.toya-footer-inner {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.toya-footer-brand p {
+  max-width: 290px;
+  margin-top: 18px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.toya-footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.toya-footer-column h3 {
+  margin-bottom: 5px;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.toya-footer-column a,
+.toya-footer-column p {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.toya-footer-column a:hover {
+  color: var(--primary);
+}
+
+.toya-footer-contact svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.toya-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  max-width: var(--container-width);
+  margin: 45px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+@media (max-width: 850px) {
+  .toya-footer-inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+}
+
+@media (max-width: 520px) {
+  .toya-footer {
+    padding: 45px 18px 18px;
+  }
+
+  .toya-footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 18px;
+  }
+
+  .toya-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .toya-footer-bottom {
+    flex-direction: column;
+    margin-top: 30px;
+    font-size: 11px;
+  }
+}

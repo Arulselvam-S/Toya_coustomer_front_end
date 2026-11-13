@@ -1,0 +1,50 @@
+
+.toya-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.toya-logo-icon {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.toya-logo-text {
+  line-height: 1;
+}
+
+/* Sizes */
+
+.toya-logo-small {
+  font-size: 21px;
+}
+
+.toya-logo-small .toya-logo-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.toya-logo-medium {
+  font-size: 29px;
+}
+
+.toya-logo-medium .toya-logo-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.toya-logo-large {
+  font-size: 37px;
+}
+
+.toya-logo-large .toya-logo-icon {
+  width: 45px;
+  height: 45px;
+}

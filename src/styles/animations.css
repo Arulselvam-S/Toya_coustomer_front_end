@@ -1,0 +1,243 @@
+
+/* =========================
+   TOYA ANIMATIONS
+========================= */
+
+/* Floating Water */
+.water-float {
+  animation: waterFloat 4s ease-in-out infinite;
+}
+
+@keyframes waterFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+/* Water Wave */
+.water-wave {
+  animation: waterWave 6s ease-in-out infinite;
+}
+
+@keyframes waterWave {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-20px);
+  }
+}
+
+/* Soft Glow */
+.soft-glow {
+  animation: softGlow 3s ease-in-out infinite;
+}
+
+@keyframes softGlow {
+  0%, 100% {
+    box-shadow: 0 5px 20px rgba(8, 120, 249, 0.08);
+  }
+
+  50% {
+    box-shadow: 0 10px 35px rgba(8, 120, 249, 0.22);
+  }
+}
+
+/* Button Shine */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    110deg,
+    transparent,
+    rgba(255,255,255,0.35),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.btn-shine:hover::after {
+  left: 130%;
+}
+
+/* Page Entry */
+.page-enter {
+  animation: pageEnter 0.55s ease forwards;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animated Gradient */
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradientMove 6s ease infinite;
+}
+
+@keyframes gradientMove {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Card Hover */
+.hover-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .water-float,
+  .water-wave,
+  .soft-glow,
+  .page-enter,
+  .animated-gradient {
+    animation: none !important;
+  }
+
+  .hover-card,
+  .btn-shine {
+    transition: none !important;
+  }
+}
+
+/* =====================================
+   TOYA PREMIUM MOTION EFFECTS
+===================================== */
+
+.water-glow {
+  position: relative;
+  isolation: isolate;
+}
+
+.water-glow::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  z-index: -1;
+  border-radius: 50%;
+  background: rgba(8, 120, 249, 0.15);
+  filter: blur(35px);
+  animation: waterGlow 4s ease-in-out infinite;
+}
+
+.water-wave-motion {
+  animation: waveMotion 7s ease-in-out infinite alternate;
+}
+
+.water-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.water-float-fast {
+  animation: floatFast 3.5s ease-in-out infinite;
+}
+
+.animated-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-border::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(8, 120, 249, 0.5),
+    transparent
+  ) border-box;
+  mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes waterGlow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes waveMotion {
+  from {
+    transform: translateX(-8px);
+  }
+
+  to {
+    transform: translateX(8px);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes floatFast {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .water-glow::before,
+  .water-wave-motion,
+  .water-float-slow,
+  .water-float-fast {
+    animation: none !important;
+  }
+}

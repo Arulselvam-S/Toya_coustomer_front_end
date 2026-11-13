@@ -1,0 +1,59 @@
+.toya-loader-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 25px;
+}
+
+.toya-loader-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.toya-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.toya-loader-icon {
+  animation: toyaSpin 0.9s linear infinite;
+}
+
+.toya-loader-small .toya-loader-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.toya-loader-medium .toya-loader-icon {
+  width: 36px;
+  height: 36px;
+}
+
+.toya-loader-large .toya-loader-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.toya-loader-text {
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@keyframes toyaSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toya-loader-icon {
+    animation-duration: 2s;
+  }
+}

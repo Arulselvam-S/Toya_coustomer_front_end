@@ -1,0 +1,32 @@
+.toya-page-container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.toya-page-container-default {
+  max-width: var(--container-width);
+}
+
+.toya-page-container-wide {
+  max-width: 1440px;
+}
+
+.toya-page-container-narrow {
+  max-width: 850px;
+}
+
+@media (max-width: 768px) {
+  .toya-page-container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .toya-page-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

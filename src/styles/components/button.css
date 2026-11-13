@@ -1,0 +1,110 @@
+
+/* BASE BUTTON */
+
+.toya-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 13px;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    color 0.25s ease;
+}
+
+/* VARIANTS */
+
+.toya-button-primary {
+  background: var(--gradient-primary);
+  color: #fff;
+  box-shadow: var(--shadow-md);
+}
+
+.toya-button-primary:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.toya-button-secondary {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.toya-button-secondary:hover {
+  background: #d8ebff;
+}
+
+.toya-button-outline {
+  background: #fff;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.toya-button-outline:hover {
+  background: var(--primary-light);
+}
+
+.toya-button-danger {
+  background: var(--danger-light);
+  color: var(--danger);
+}
+
+/* SIZES */
+
+.toya-button-small {
+  min-height: 36px;
+  padding: 8px 14px;
+  font-size: 12px;
+}
+
+.toya-button-medium {
+  min-height: 46px;
+  padding: 12px 21px;
+  font-size: 14px;
+}
+
+.toya-button-large {
+  min-height: 58px;
+  padding: 16px 26px;
+  font-size: 16px;
+}
+
+/* FULL WIDTH */
+
+.toya-button-full {
+  width: 100%;
+}
+
+/* DISABLED */
+
+.toya-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* LOADING */
+
+.button-loader {
+  animation: buttonSpin 0.8s linear infinite;
+}
+
+@keyframes buttonSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button-loader {
+    animation: none;
+  }
+
+  .toya-button {
+    transition: none;
+  }
+}
