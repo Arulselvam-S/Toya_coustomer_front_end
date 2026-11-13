@@ -1,0 +1,110 @@
+
+.coming-soon-page {
+  min-height: calc(100vh - 82px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f4f9ff, #e8f4ff);
+}
+
+.coming-soon-card {
+  width: 100%;
+  max-width: 520px;
+  padding: 45px 30px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #dce8f5;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(8, 120, 249, 0.10);
+}
+
+.coming-soon-icon {
+  width: 85px;
+  height: 85px;
+  margin: 0 auto 22px;
+  display: grid;
+  place-items: center;
+  color: #0878f9;
+  background: #e8f4ff;
+  border-radius: 50%;
+}
+
+.coming-soon-status {
+  display: inline-block;
+  padding: 8px 14px;
+  color: #a66a00;
+  background: #fff4dc;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.coming-soon-card h1 {
+  margin: 18px 0 8px;
+  color: #102d62;
+  font-size: 32px;
+}
+
+.coming-soon-card h2 {
+  color: #0878f9;
+  font-size: 19px;
+}
+
+.coming-soon-card p {
+  margin: 15px auto 25px;
+  max-width: 380px;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.coming-soon-progress {
+  height: 7px;
+  overflow: hidden;
+  background: #e8f4ff;
+  border-radius: 20px;
+}
+
+.coming-soon-progress div {
+  width: 65%;
+  height: 100%;
+  background: #0878f9;
+  border-radius: 20px;
+  animation: progressMove 2s ease-in-out infinite alternate;
+}
+
+.coming-soon-caption {
+  display: block;
+  margin-top: 12px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.coming-soon-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  padding: 12px 22px;
+  color: white;
+  background: #0878f9;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@keyframes progressMove {
+  from { width: 35%; }
+  to { width: 85%; }
+}
+
+@media (max-width: 600px) {
+  .coming-soon-card {
+    padding: 35px 20px;
+  }
+
+  .coming-soon-card h1 {
+    font-size: 27px;
+  }
+}

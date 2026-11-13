@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 
 import Home from "./pages/Home";
 import Location from "./pages/Location";
-
+import ComingSoon from "./pages/ComingSoon";
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +16,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/location" element={<Location />} />
+          <Route path="/orders" element={<ComingSoon />} />
+          <Route path="/wallet" element={<ComingSoon />} />
+          <Route path="/profile" element={<ComingSoon />} />
 
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
